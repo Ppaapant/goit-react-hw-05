@@ -1,0 +1,27 @@
+.reviewsContainer {
+    padding: 16px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .reviewItem {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .reviewItem h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+  }
+  
+  .reviewItem p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
