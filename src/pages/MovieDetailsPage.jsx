@@ -70,6 +70,7 @@ const MovieDetailsPage = () => {
             <NavLink to="review">Review</NavLink>
         </li>
        </ul>
+       
        <Outlet/>
 
     </div>
