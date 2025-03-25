@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, Link, NavLink, Outlet } from 'react-router-dom';  
 import { getMovieDetails } from '../services/api'; 
 
@@ -9,6 +9,7 @@ const MovieDetailsPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate(); 
+  const backLinkRef = useRef(location.state?.from || "/movies");
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -50,7 +51,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <button onClick={handleGoBack}>Go back</button>
+      <Link to={backLinkRef.current}>Go back</Link>
 
       <div>
         <img src={posterUrl} alt={title} />
